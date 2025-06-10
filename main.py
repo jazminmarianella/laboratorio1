@@ -15,6 +15,9 @@ csv.cargar_datos()
 json = DatasetJSON(json_path)
 json.cargar_datos()
 
+#TODO: Validacion de datos
+
+
 # Guardar en la base de datos
 db = DataSaver()
 db.guardar_dataframe(csv.datos, "")
