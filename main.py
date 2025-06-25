@@ -13,7 +13,12 @@ for file in listdir("files/"):
     if file.endswith('.csv'):
         dataset = DatasetCSV(file_path)
     elif file.endswith('.json'):
-        dataset = DatasetJSON(file_path)
+        # Se define un esquema para el JSON, a modo de ejemplo
+        dataset = DatasetJSON(file_path,
+                              schema={"nombre": "object",
+                                       "edad": "int64",
+                                        "ciudad": "object"}
+                            )
     elif file.endswith('.xlsx'):
         dataset = DatasetXLSX(file_path)
     else:

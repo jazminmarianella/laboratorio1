@@ -3,8 +3,8 @@ import pandas as pd
 
 
 class DatasetXLSX(Dataset):
-    def __init__(self, ruta_archivo):
-        super().__init__(ruta_archivo)
+    def __init__(self, ruta_archivo, schema: dict = None):
+        super().__init__(ruta_archivo, schema)
 
 
     def cargar_datos(self):
